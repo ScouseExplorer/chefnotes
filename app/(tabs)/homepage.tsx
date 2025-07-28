@@ -13,16 +13,46 @@ const HomePage = () => {
             <View style={styles.container}>
              <ScrollView contentContainerStyle={styles.scrollContent}>
                  <View style={styles.row}>
-                     <Pressable style={[styles.box1, styles.firstBox]} onPress={() => handleFeaturePress('Feature 1')}>
+                     <Pressable 
+                        style={({ pressed }) => [
+                            styles.box1, 
+                            styles.firstBox,
+                            {
+                                backgroundColor: pressed ? '#005bb5' : '#007AFF',
+                                transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }],
+                            }
+                        ]} 
+                         onPress={() => handleFeaturePress('Feature 1')}
+                     >
                          <Text style={styles.boxText}>Quick and Healthy</Text>
                      </Pressable>
-                     <Pressable style={[styles.box2, styles.secondBox]} onPress={() => handleFeaturePress('Feature 2')}>
+                     <Pressable 
+                        style={({ pressed }) => [
+                            styles.box2, 
+                            styles.secondBox,
+                            {
+                                backgroundColor: pressed ? '#005bb5' : '#007AFF',
+                                transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }],
+                            }
+                        ]} 
+                        onPress={() => handleFeaturePress('Feature 2')}
+                     >
                          <Text style={styles.boxText}>High Protein</Text>
                      </Pressable>
                  </View>
                  
                  <View style={styles.row}>
-                     <Pressable style={[styles.box1, styles.thirdBox]} onPress={() => handleFeaturePress('Feature 3')}>
+                     <Pressable 
+                        style={({ pressed }) => [
+                            styles.box1, 
+                            styles.thirdBox,
+                            {
+                                backgroundColor: pressed ? '#005bb5' : '#007AFF',
+                                transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }],
+                            }
+                        ]} 
+                        onPress={() => handleFeaturePress('Feature 3')}
+                     >
                          <Text style={[styles.boxText, styles.lowCarbText]}>Low Carb </Text>
                          <Image
                              source={require('../../assets/images/lowcarb.jpg')}
@@ -30,13 +60,33 @@ const HomePage = () => {
                              resizeMode="cover"
                             />
                      </Pressable>
-                     <Pressable style={[styles.box2, styles.fourthBox]} onPress={() => handleFeaturePress('Feature 4')}>
+                     <Pressable 
+                        style={({ pressed }) => [
+                            styles.box2, 
+                            styles.fourthBox,
+                            {
+                                backgroundColor: pressed ? '#005bb5' : '#007AFF',
+                                transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }],
+                            }
+                        ]} 
+                        onPress={() => handleFeaturePress('Feature 4')}
+                     >
                          <Text style={styles.boxText}>Meal Prep Ideas</Text>
                      </Pressable>
                  </View>
                  
                  <View style={styles.row}>
-                    <Pressable style={[styles.box1, styles.fifthBox]} onPress={() => handleFeaturePress('Feature 5')}>
+                    <Pressable 
+                       style={({ pressed }) => [
+                           styles.box1, 
+                           styles.fifthBox,
+                           {
+                               backgroundColor: pressed ? '#005bb5' : '#007AFF',
+                               transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }],
+                           }
+                       ]} 
+                       onPress={() => handleFeaturePress('Feature 5')}
+                    >
                         <Text style={[styles.boxText, styles.dinnerText]}>Dinner Ideas</Text>
                         <Image
                             source={require('../../assets/images/Homemade-lasagna.png')}
@@ -44,14 +94,34 @@ const HomePage = () => {
                             resizeMode="cover"
                         />
                     </Pressable>
-                     <Pressable style={[styles.box2, styles.sixthBox]} onPress={() => handleFeaturePress('Feature 6')}>
+                     <Pressable 
+                        style={({ pressed }) => [
+                            styles.box2, 
+                            styles.sixthBox,
+                            {
+                                backgroundColor: pressed ? '#005bb5' : '#007AFF',
+                                transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }],
+                            }
+                        ]} 
+                        onPress={() => handleFeaturePress('Feature 6')}
+                     >
                          <Text style={styles.boxText}>Your Saved Meals</Text>
                      </Pressable>
                  </View>
                  
                  {/* Additional row of boxes */}
                  <View style={styles.row}>
-                     <Pressable style={[styles.box1, styles.seventhBox]} onPress={() => handleFeaturePress('Feature 7')}>
+                     <Pressable 
+                        style={({ pressed }) => [
+                            styles.box1, 
+                            styles.seventhBox,
+                            {
+                                backgroundColor: pressed ? '#005bb5' : '#007AFF',
+                                transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }],
+                            }
+                        ]} 
+                        onPress={() => handleFeaturePress('Feature 7')}
+                     >
                          <Text style={[styles.boxText, styles.breakfastText]}>Breakfast Ideas</Text>
                          <Image
                              source={require('../../assets/images/download.jpg')}
@@ -59,7 +129,17 @@ const HomePage = () => {
                              resizeMode="cover"
                          />
                      </Pressable>
-                     <Pressable style={[styles.box2, styles.eighthBox]} onPress={() => handleFeaturePress('Feature 8')}>
+                     <Pressable 
+                        style={({ pressed }) => [
+                            styles.box2, 
+                            styles.eighthBox,
+                            {
+                                backgroundColor: pressed ? '#005bb5' : '#007AFF',
+                                transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }],
+                            }
+                        ]} 
+                        onPress={() => handleFeaturePress('Feature 8')}
+                     >
                          <Text style={styles.boxText}>Dessert Recipes</Text>
                      </Pressable>
                  </View>
@@ -68,13 +148,34 @@ const HomePage = () => {
                  <View style={styles.sectionContainer}>
                      <Text style={styles.sectionTitle}>High Protein Dishes</Text>
                      <View style={styles.row}>
-                         <Pressable style={[styles.box1, styles.ninthBox]} onPress={() => handleFeaturePress('Feature 9')}>
+                         <Pressable 
+                            style={({ pressed }) => [
+                                styles.box1, 
+                                styles.ninthBox,
+                                {
+                                    backgroundColor: pressed ? '#005bb5' : '#007AFF',
+                                    transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }],
+                                }
+                            ]} 
+                            onPress={() => handleFeaturePress('Feature 9')}
+                         >
                              <Text style={styles.boxText}>Trending Recipes</Text>
                          </Pressable>
-                         <Pressable style={[styles.box2, styles.tenthBox]} onPress={() => handleFeaturePress('Feature 10')}>
+                         <Pressable 
+                            style={({ pressed }) => [
+                                styles.box2, 
+                                styles.tenthBox,
+                                {
+                                    backgroundColor: pressed ? '#005bb5' : '#007AFF',
+                                    transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }],
+                                }
+                            ]} 
+                            onPress={() => handleFeaturePress('Feature 10')}
+                         >
                              <Text style={styles.boxText}>Chef's Choice</Text>
                          </Pressable>
                      </View>
+                     <Text style={styles.sectionTitle}>Easy Dinner Recipes</Text>
                  </View>
              </ScrollView>
             </View>
@@ -153,6 +254,7 @@ const styles = StyleSheet.create({
         },
         ninthBox: {
             backgroundColor: '#007AFF',
+
         },
         tenthBox: {
             backgroundColor: '#007AFF',
@@ -163,7 +265,7 @@ const styles = StyleSheet.create({
         },
         sectionTitle: {
             fontSize: 20,
-            right : 90,
+            right : 80,
             fontWeight: 'bold',
             color: '#333',
             textAlign: 'center',
