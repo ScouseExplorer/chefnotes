@@ -294,7 +294,7 @@ const styles = StyleSheet.create({
         },
         breakfastText: {
             position: 'absolute',
-            right: 10, // Controls how far from the right edge
+            right: 4, // Controls how far from the right edge
             top: '40%',
             transform: [{ translateY: -10 }], // Centers text vertically
             fontSize: 14.2,
