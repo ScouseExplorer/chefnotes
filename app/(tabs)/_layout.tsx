@@ -14,52 +14,58 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
+      tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+      headerShown: false,
+      tabBarButton: HapticTab,
+      tabBarBackground: TabBarBackground,
+      tabBarStyle: Platform.select({
+        ios: {
+        // Use a transparent background on iOS to show the blur effect
+        position: 'absolute',
+        },
+        android: {
+        // You can customize Android tab bar style here
+        elevation: 8, // Adds shadow on Android
+        backgroundColor: Colors[colorScheme ?? 'light'].background,
+        borderTopWidth: 0,
+        },
+        default: {},
+      }),
       }}>
       <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Login',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.circle.fill" color={color} />,
-        }}
+      name="index"
+      options={{
+        title: 'Login',
+        tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.circle.fill" color={color} />,
+      }}
       />
       <Tabs.Screen
-        name="homepage"
-        options={{
-          title: 'Recipes',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
-        }}
+      name="homepage"
+      options={{
+        title: 'Recipes',
+        tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+      }}
       />
       <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="magnifyingglass" color={color} />,
-        }}
+      name="explore"
+      options={{
+        title: 'Explore',
+        tabBarIcon: ({ color }) => <IconSymbol size={28} name="magnifyingglass" color={color} />,
+      }}
       />
       <Tabs.Screen
-        name="favorites"
-        options={{
-          title: 'Favorites',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="heart.fill" color={color} />,
-        }}
+      name="favorites"
+      options={{
+        title: 'Favorites',
+        tabBarIcon: ({ color }) => <IconSymbol size={28} name="heart.fill" color={color} />,
+      }}
       />
       <Tabs.Screen
-        name="profile"
-        options={{
-          title: 'Profile',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.fill" color={color} />,
-        }}
+      name="profile"
+      options={{
+        title: 'Profile',
+        tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.fill" color={color} />,
+      }}
       />
     </Tabs>
   );

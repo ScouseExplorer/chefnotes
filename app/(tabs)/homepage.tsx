@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable, StyleSheet, Alert, ScrollView } from 'react-native';
+import { View, Text, Pressable, StyleSheet, Alert, ScrollView, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
@@ -23,7 +23,12 @@ const HomePage = () => {
                  
                  <View style={styles.row}>
                      <Pressable style={[styles.box1, styles.thirdBox]} onPress={() => handleFeaturePress('Feature 3')}>
-                         <Text style={styles.boxText}>Low Carb </Text>
+                         <Text style={[styles.boxText, styles.lowCarbText]}>Low Carb </Text>
+                         <Image
+                             source={require('../../assets/images/lowcarb.jpg')}
+                             style={styles.dinnerImage}
+                             resizeMode="cover"
+                            />
                      </Pressable>
                      <Pressable style={[styles.box2, styles.fourthBox]} onPress={() => handleFeaturePress('Feature 4')}>
                          <Text style={styles.boxText}>Meal Prep Ideas</Text>
@@ -31,9 +36,14 @@ const HomePage = () => {
                  </View>
                  
                  <View style={styles.row}>
-                     <Pressable style={[styles.box1, styles.fifthBox]} onPress={() => handleFeaturePress('Feature 5')}>
-                         <Text style={styles.boxText}>Diner Ideas</Text>
-                     </Pressable>
+                    <Pressable style={[styles.box1, styles.fifthBox]} onPress={() => handleFeaturePress('Feature 5')}>
+                        <Text style={[styles.boxText, styles.dinnerText]}>Dinner Ideas</Text>
+                        <Image
+                            source={require('../../assets/images/Homemade-lasagna.png')}
+                            style={styles.dinnerImage}
+                            resizeMode="cover"
+                        />
+                    </Pressable>
                      <Pressable style={[styles.box2, styles.sixthBox]} onPress={() => handleFeaturePress('Feature 6')}>
                          <Text style={styles.boxText}>Your Saved Meals</Text>
                      </Pressable>
@@ -42,7 +52,12 @@ const HomePage = () => {
                  {/* Additional row of boxes */}
                  <View style={styles.row}>
                      <Pressable style={[styles.box1, styles.seventhBox]} onPress={() => handleFeaturePress('Feature 7')}>
-                         <Text style={styles.boxText}>Breakfast Ideas</Text>
+                         <Text style={[styles.boxText, styles.breakfastText]}>Breakfast Ideas</Text>
+                         <Image
+                             source={require('../../assets/images/download.jpg')}
+                             style={styles.breakfastImage}
+                             resizeMode="cover"
+                         />
                      </Pressable>
                      <Pressable style={[styles.box2, styles.eighthBox]} onPress={() => handleFeaturePress('Feature 8')}>
                          <Text style={styles.boxText}>Dessert Recipes</Text>
@@ -51,7 +66,7 @@ const HomePage = () => {
                  
                  {/* More content section */}
                  <View style={styles.sectionContainer}>
-                     <Text style={styles.sectionTitle}>Popular This Week</Text>
+                     <Text style={styles.sectionTitle}>High Protein Dishes</Text>
                      <View style={styles.row}>
                          <Pressable style={[styles.box1, styles.ninthBox]} onPress={() => handleFeaturePress('Feature 9')}>
                              <Text style={styles.boxText}>Trending Recipes</Text>
@@ -87,75 +102,121 @@ const styles = StyleSheet.create({
     scrollContent: {
         alignItems: 'stretch', // Allow full width for positioning
         paddingTop: 20,
-        paddingBottom: 150, // Increased padding to account for Expo's footer
-    },
-    row: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginBottom: 10,
-    },
-    box1: {
-        width: 170,
-        height: 50,
-        position: 'relative',
-        backgroundColor: '#007AFF',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 4,
-    },
-    box2: {
-        width: 170,
-        height: 50,
-        position: 'relative',
-        backgroundColor: '#007AFF',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 4,
-    },
-    firstBox: {
-        backgroundColor: '#007AFF',
-    },
-    secondBox: {
-        backgroundColor: '#007AFF',
-    },
-    thirdBox: {
-        backgroundColor: '#007AFF',
-    },
-    fourthBox: {
-        backgroundColor: '#007AFF',
-    },
-    fifthBox: {
-        backgroundColor: '#007AFF',
-    },
-    sixthBox: {
-        backgroundColor: '#007AFF',
-    },
-    seventhBox: {
-        backgroundColor: '#007AFF',
-    },
-    eighthBox: {
-        backgroundColor: '#007AFF',
-    },
-    ninthBox: {
-        backgroundColor: '#007AFF',
-    },
-    tenthBox: {
-        backgroundColor: '#007AFF',
-    },
-    sectionContainer: {
-        marginTop: 20,
-        marginBottom: 10,
-    },
-    sectionTitle: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: '#333',
-        textAlign: 'center',
-        marginBottom: 15,
-    },
-    boxText: {
-        color: '#fff',
-        fontSize: 18,
-        fontWeight: 'bold',
-    },
+        // Increased padding to account for Expo's footer
+        },
+        row: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginBottom: 10,
+        },
+        box1: {
+            width: 170,
+            height: 50,
+            position: 'relative',
+            backgroundColor: '#007AFF',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: 4,
+        },
+        box2: {
+            width: 170,
+            height: 50,
+            position: 'relative',
+            backgroundColor: '#007AFF',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: 4,
+        },
+        firstBox: {
+            backgroundColor: '#007AFF',
+        },
+        secondBox: {
+            backgroundColor: '#007AFF',
+        },
+        thirdBox: {
+            backgroundColor: '#007AFF',
+        },
+        fourthBox: {
+            backgroundColor: '#007AFF',
+        },
+        fifthBox: {
+            backgroundColor: '#007AFF',
+        },
+        sixthBox: {
+            backgroundColor: '#007AFF',
+        },
+        seventhBox: {
+            backgroundColor: '#007AFF',
+        },
+        eighthBox: {
+            backgroundColor: '#007AFF',
+        },
+        ninthBox: {
+            backgroundColor: '#007AFF',
+        },
+        tenthBox: {
+            backgroundColor: '#007AFF',
+        },
+        sectionContainer: {
+            marginTop: 20,
+            marginBottom: 10,
+        },
+        sectionTitle: {
+            fontSize: 20,
+            right : 90,
+            fontWeight: 'bold',
+            color: '#333',
+            textAlign: 'center',
+            marginBottom: 15,
+        },
+        boxText: {
+            color: '#fff',
+            fontSize: 18,
+            fontWeight: 'bold',
+            marginTop: -6, // <-- Add this line to move text up a bit
+        },
+
+        dinnerText: {
+            position: 'absolute',
+            right: 10, // Controls how far from the right edge
+            top: '40%',
+            transform: [{ translateY: -10 }], // Centers text vertically
+        },
+        dinnerImage: {
+            width: 50,
+            height: 50, // This will now work with resizeMode="cover"
+            position: 'absolute',
+            left: 0.1,
+            top: 0.1,
+            borderRadius: 4,
+        },
+        breakfastText: {
+            position: 'absolute',
+            right: 10, // Controls how far from the right edge
+            top: '40%',
+            transform: [{ translateY: -10 }], // Centers text vertically
+            fontSize: 14.2,
+        },
+        breakfastImage: {
+            width: 50,
+            height: 50, // This will now work with resizeMode="cover"
+            position: 'absolute',
+            left: 0.1,
+            top: 0.1,
+            borderRadius: 4,
+        },
+        lowCarbText: {
+            position: 'absolute',
+            right: 30, // Controls how far from the right edge
+            top: '40%',
+            transform: [{ translateY: -10 }], // Centers text vertically
+        },
+        lowCarbImage: {
+            width: 50,
+            height: 50, // This will now work with resizeMode="cover"
+            position: 'absolute',
+            left: 0.1,
+            top: 0.1,
+            borderRadius: 4,
+        },
 })
